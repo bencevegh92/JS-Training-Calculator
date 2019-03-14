@@ -1,0 +1,94 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*---------------- Colors ----------------*/
+/*---------------- Media ----------------*/
+body {
+  box-sizing: border-box;
+  background: url("https://i.pinimg.com/originals/b3/54/c7/b354c78a38bd30380d4f3882103b140f.jpg") no-repeat fixed;
+  background-size: cover;
+  font-family: 'ZCOOL QingKe HuangYou', cursive; }
+
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 3em;
+  color: bisque; }
+
+.calculator {
+  max-width: 30vw;
+  margin: 0 auto; }
+  .calculator .calculator__bg {
+    background-color: #222222;
+    color: #fff;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    border-radius: 0.3em 0.3em 0 0; }
+  .calculator .calculator__display {
+    background-color: #222222;
+    color: #fff;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    border-radius: 0.3em 0.3em 0 0; }
+  .calculator .calculator__keys {
+    background-color: #999;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.1em; }
+    .calculator .calculator__keys .calculator__buttons {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #111;
+      padding: 0.7em;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 22px;
+      cursor: pointer;
+      outline: none; }
+      .calculator .calculator__keys .calculator__buttons:hover {
+        background-color: #0d3349; }
+      .calculator .calculator__keys .calculator__buttons:focus {
+        background-color: #2d4949; }
+    .calculator .calculator__keys .key--equal {
+      background-image: linear-gradient(to bottom, #fe886a, #ff7033);
+      grid-column: -2;
+      grid-row: 2 / span 4; }
+
+/*# sourceMappingURL=style.css.map */

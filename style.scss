@@ -1,0 +1,84 @@
+@import "reset";
+
+/*---------------- Colors ----------------*/
+$main-color: #fff;
+$calculator-display-bg: #222222;
+
+$keys-bg: #999;
+$button-bg: rgba(0, 0, 0, 0.5);
+$button-border: 1px solid #111;
+$button-hover: #0d3349;
+$button-focus: #2d4949;
+$button-equal: linear-gradient(to bottom, #fe886a, #ff7033);
+
+/*---------------- Media ----------------*/
+
+//$break-mobile: 400px;
+//$break-small: 680px;
+
+
+body {
+  box-sizing: border-box;
+  background: url("https://i.pinimg.com/originals/b3/54/c7/b354c78a38bd30380d4f3882103b140f.jpg") no-repeat fixed;
+  background-size: cover;
+
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+
+  font-size: 3em;
+  color: bisque;
+}
+
+.calculator {
+  max-width: 30vw;
+  margin: 0 auto;
+  .calculator__bg {
+    background-color: $calculator-display-bg;
+    color: $main-color;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    border-radius: 0.3em 0.3em 0 0;
+  }
+  .calculator__display {
+    background-color: $calculator-display-bg;
+    color: $main-color;
+    font-size: 1.714285714em;
+    padding: 0.5em 0.75em;
+    text-align: right;
+    border-radius: 0.3em 0.3em 0 0;
+  }
+  .calculator__keys {
+    background-color: $keys-bg;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.1em;
+    .calculator__buttons {
+      background: $button-bg;
+      border: $button-border;
+      padding: 0.7em;
+      color: $main-color;
+      border-radius: 5px;
+      font-size: 22px;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        background-color: $button-hover;
+      }
+      &:focus {
+        background-color: $button-focus;
+      }
+    }
+    .key--equal {
+      background-image: $button-equal;
+      grid-column: -2;
+      grid-row: 2 / span 4;
+    }
+  }
+}
+
