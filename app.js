@@ -1,3 +1,5 @@
+// 'use strict';
+
 const zero = 0;
 const one = 1;
 const two = 2;
@@ -9,22 +11,32 @@ const seven = 7;
 const eight = 8;
 const nine = 9;
 
+// var operators = {
+//     plus : "+",
+//     minus : "-",
+//     multiply : "*",
+//     degree : "/",
+//     decimal : "."
+// };
+//
+// var operatorsJSON = JSON.stringify(operators);
+// localStorage.setItem("asdasdasdasdasd", operatorsJSON);
+
 const plus = "+";
 const minus = "-";
 const multiply = "*";
 const degree = "/";
 const decimal = ".";
 
-var currentValue = "";
+let currentValue = "";
+
 
 /* ---------- Display Numbers ---------- */
 
 document.getElementById("zero").addEventListener("click", storeData);
 function storeData() {
     currentValue += zero;
-
     document.querySelector(".calculator__display").innerHTML = currentValue;
-    // document.querySelector(".calculator__display").innerHTML = zero;
 }
 document.getElementById("one").addEventListener("click", displayOne);
 function displayOne() {
@@ -99,11 +111,6 @@ function displaydecimal() {
     currentValue += decimal;
     document.querySelector(".calculator__display").innerHTML = currentValue;
 }
-document.getElementById("restore").addEventListener("click", displayrestore);
-function displayrestore() {
-    currentValue = 0;
-    document.querySelector(".calculator__display").innerHTML = currentValue;
-}
 
 /* ---------- Calculate ---------- */
 
@@ -112,3 +119,12 @@ function equal() {
     currentValue = eval(currentValue);
     document.querySelector(".calculator__display").innerHTML = currentValue;
 }
+
+/* ---------- Default ---------- */
+
+document.getElementById("restore").addEventListener("click", displayrestore);
+function displayrestore() {
+    currentValue = 0;
+    document.querySelector(".calculator__display").innerHTML = currentValue;
+}
+
